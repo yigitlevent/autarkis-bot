@@ -18,7 +18,7 @@ App.use(express.static(App.get("publicPath")));
 App.use("/", Router);
 
 // DATABASE
-export const DatabaseClient = createClient(process.env.DATABASE_URL as string, process.env.DATABASE_TOKEN as string);
+export const DatabaseClient = createClient(process.env.DATABASE_URL as string, process.env.DATABASE_KEY as string);
 
 // BOT
 export const DiscordClient = new Client({ ws: { intents: new Intents([Intents.NON_PRIVILEGED, "GUILD_MEMBERS"]) } });
