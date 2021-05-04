@@ -21,7 +21,7 @@ export const Router = express.Router().post("/",
 	],
 	async (request: express.Request, response: express.Response) => {
 		const errors: ValidationError[] = validationResult(request).array();
-		if (errors?.length > 0) { return response.status(400).json({ success: "error", data: ["Auth error.", ...errors] }); }
+		if (errors && errors.length > 0) { return response.status(400).json({ success: "error", data: ["Auth error.", ...errors] }); }
 
 		const { charKey } = request.body;
 

@@ -21,7 +21,7 @@ export function SendRollResult(guildID: string, channelName: string, rollResult:
 }
 
 function CreateEmbedMessage(guild: Guild, member: GuildMember | undefined, rollResult: Roll) {
-	const memberID = (member) ? `<@${member?.user.id}>` : rollResult.charName;
+	const memberID = (member) ? `<@${member.user.id}>` : rollResult.charName;
 
 	const emojis = GetEmojis(guild);
 

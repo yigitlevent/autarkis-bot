@@ -31,7 +31,7 @@ Server.listen(3000);
 
 Server.on("listening", () => {
 	const addr: any = Server.address();
-	console.log(`Server listening at http://${addr.address}:${addr.port} (${addr.family})`);
+	console.log(`Bot listening at http://${addr.address}:${addr.port}/ (${addr.family})`);
 });
 
 Server.on("error", (error: any) => {
