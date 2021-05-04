@@ -29,7 +29,7 @@ export const Router = express.Router().post("/",
 
 		if (error) { return response.status(400).json({ success: "error", data: ["Character is not in a Chronicle."] }); }
 		else {
-			const { data: chronicleData, error: chronicleError } = await DatabaseClient.from("chronicles").select().is("uuid", data).single();
+			const { data: chronicleData, error: chronicleError } = await DatabaseClient.from("chronicles").select().is("uuid", data[0].uuid).single();
 
 			if (chronicleData) {
 				if (!DiscordClient.readyAt) { return response.status(400).json({ success: "error", data: ["Discord Bot is not ready."] }); }
