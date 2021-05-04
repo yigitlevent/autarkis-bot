@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": false,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"removeComments": true,
+		"noEmitOnError": true,
+		"baseUrl": "./src",
+		"outDir": "./build"
+	},
+	"include": ["./src"],
+	"exclude": ["node_modules", "build", "dist"]
+}
